@@ -1,8 +1,8 @@
-const express = require('express');
-const app = express();
-const router = require('./router');
+import pkg from 'express';
+const app = pkg();
+import router from './router.js';
 
-app.use(express.json());
+app.use(pkg.json());
 app.use(router);
 
 app.listen(3000);
