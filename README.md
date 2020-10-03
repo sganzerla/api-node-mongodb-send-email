@@ -6,10 +6,11 @@ Projeto para testar cadastro de usuários com confirmação de email e recupera�
 
 Diretos
     * Node.js (12.18.4)
-    * Express (4.17.1)  
-    * Mongoose (5.10.7)
-    * Nodemon (2.0.4)
-    * Bcryptjs (2.4.3)
+    * express (4.17.1)  
+    * mongoose (5.10.7)
+    * nodemon (2.0.4)
+    * bcryptjs (2.4.3)
+    * jsonwebtoken (8.5.1)
     
 Indiretos:
 
@@ -39,19 +40,23 @@ Para checar as coleções cadastradas no banco de dados pode-se utilizar o plugi
 
 ## Realizar chamadas API com Insomnia
 
-Criar variáveis de url
+### Criar variáveis de url
 
 [image]('./resources/insomnia/environment1.png)
 
 [image]('./resources/insomnia/environment2.png)
 
-Criar requisição post 
+### Criar requisição post 
 
 [image]('./resources/insomnia/requestpost1.png')
 
 [image]('./resources/insomnia/requestpost2.png')
 
+#### Cadastrar usuários
+
 [image]('./resources/insomnia/requestpost3.png')
 
+#### Realizar login
 
+[image]('./resources/insomnia/auth-post.png')
 
