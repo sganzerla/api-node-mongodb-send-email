@@ -2,7 +2,7 @@ import User from './../models/user.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
-import authConfig from '../config/auth.js';
+import authConfig from './../../config/auth.js';
 
 function generateToken(params = {}) {
     return jwt.sign(params, authConfig.secret, {
