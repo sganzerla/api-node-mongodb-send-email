@@ -9,6 +9,7 @@ Projeto para testar cadastro de usuários com confirmação de email e recupera�
 ## Índice
 
 - [Índice]
+
     -[:bookmark: Sobre](#sobre)
     -[:rocket: Tecnologias utilizadas](#tecnologias-utilizadas)
     -[:memo: Pré-requisitos](#require)
@@ -67,24 +68,24 @@ Possuir o Yarn instalado na máquina e rodar os comandos dentro da pasta raiz do
 
 ### Criar variáveis de url
 
-![image]('./resources/insomnia/environment1.png)
+![image](resources/insomnia/environment1.png)
 
-![image]('./resources/insomnia/environment2.png)
+![image](resources/insomnia/environment2.png)
 
 ### Criar requisição post 
 
-![image]('./resources/insomnia/requestpost1.png')
+![image](resources/insomnia/requestpost1.png)
 
-![image]('./resources/insomnia/requestpost2.png')
+![image](resources/insomnia/requestpost2.png)
 
 #### Cadastrar usuários
 
-![image]('./resources/insomnia/requestpost3.png')
+![image](resources/insomnia/requestpost3.png)
 
 #### Realizar login
 
-![image]('./resources/insomnia/auth-post.png')
+![image](resources/insomnia/auth-post.png)
 
 ### Acessar url com autenticação
 
-![image]('./resources/insomnia/get-project.png')
+![image](resources/insomnia/get-project.png)
