@@ -9,12 +9,11 @@ Projeto para testar cadastro de usuários com confirmação de email e recupera�
 ## Índice
 
 - [Índice]
-
-    -[:bookmark: Sobre](#sobre)
-    -[:rocket: Tecnologias utilizadas](#tecnologias-utilizadas)
-    -[:memo: Pré-requisitos](#require)
-    -[:fire: Como rodar este projeto](#run)
-    -[:trophy: Realizar chamadas API com Insomnia](#request)
+    - [:bookmark: Sobre](#sobre)
+    - [:rocket: Tecnologias utilizadas](#tecnologias-utilizadas)
+    - [:memo: Pré-requisitos](#require)
+    - [:fire: Como rodar este projeto](#run)
+    - [:trophy: Realizar chamadas API com Insomnia](#request)
 
 
 <a id="tecnologias-utilizadas"></a>
