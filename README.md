@@ -4,7 +4,8 @@ Projeto para testar cadastro de usuários com confirmação de email e recupera�
 
 ## Tecnologias utilizadas neste projeto
 
-Diretos
+Diretos:
+
     * Node.js (12.18.4)
     * express (4.17.1)  
     * mongoose (5.10.7)
@@ -23,6 +24,7 @@ Indiretos:
 ## Como rodar este projeto
 
 Dentro da pasta raiz
+
     `
     yarn init
     yarn start
@@ -30,11 +32,11 @@ Dentro da pasta raiz
 
 ## Pré-requisitos
 
-Instalação MongoDB
+### Instalação MongoDB
 
 Com docker instalado utilizar os comandos do [link](https://gist.github.com/sganzerla/936fa20d3332c6107333e9aa969d5904) para rodar o MongoDB em um container.
 
-Cliente MongoDB
+### Cliente MongoDB
 
 Para checar as coleções cadastradas no banco de dados pode-se utilizar o plugin oficial [MongoDB](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode) no VSCode
 
@@ -42,21 +44,24 @@ Para checar as coleções cadastradas no banco de dados pode-se utilizar o plugi
 
 ### Criar variáveis de url
 
-[image]('./resources/insomnia/environment1.png)
+![image]('./resources/insomnia/environment1.png)
 
-[image]('./resources/insomnia/environment2.png)
+![image]('./resources/insomnia/environment2.png)
 
 ### Criar requisição post 
 
-[image]('./resources/insomnia/requestpost1.png')
+![image]('./resources/insomnia/requestpost1.png')
 
-[image]('./resources/insomnia/requestpost2.png')
+![image]('./resources/insomnia/requestpost2.png')
 
 #### Cadastrar usuários
 
-[image]('./resources/insomnia/requestpost3.png')
+![image]('./resources/insomnia/requestpost3.png')
 
 #### Realizar login
 
-[image]('./resources/insomnia/auth-post.png')
+![image]('./resources/insomnia/auth-post.png')
 
+### Acessar url com autenticação
+
+![image]('./resources/insomnia/get-project.png')
