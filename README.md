@@ -37,7 +37,21 @@ Cliente MongoDB
 
 Para checar as coleções cadastradas no banco de dados pode-se utilizar o plugin oficial [MongoDB](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode) no VSCode
 
-## Realizar chamadas API
+## Realizar chamadas API com Insomnia
 
-Utilizando o Insomnia:
+Criar variáveis de url
+
+[image]('./resources/insomnia/environment1.png)
+
+[image]('./resources/insomnia/environment2.png)
+
+Criar requisição post 
+
+[image]('./resources/insomnia/requestpost1.png')
+
+[image]('./resources/insomnia/requestpost2.png')
+
+[image]('./resources/insomnia/requestpost3.png')
+
+
 
