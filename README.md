@@ -1,10 +1,28 @@
 # api-node-mongodb-send-email
 
+<a id="sobre"></a>
+
+## :bookmark: Sobre
+
 Projeto para testar cadastro de usuários com confirmação de email e recuperação de login utilizando base de dados MongoDB.
 
-## Tecnologias utilizadas neste projeto
+## Índice
 
-Diretos:
+- [Índice]
+    -[:bookmark: Sobre](#sobre)
+    -[:rocket: Tecnologias utilizadas](#tecnologias-utilizadas)
+    -[:memo: Pré-requisitos](#require)
+    -[:fire: Como rodar este projeto](#run)
+    -[:trophy: Realizar chamadas API com Insomnia](#request)
+
+
+<a id="tecnologias-utilizadas"></a>
+
+## :rocket: Tecnologias utilizadas
+
+Neste projeto foram empregadas as seguintes tecnologias:
+
+### Diretas
 
     * Node.js (12.18.4)
     * express (4.17.1)  
@@ -13,7 +31,7 @@ Diretos:
     * bcryptjs (2.4.3)
     * jsonwebtoken (8.5.1)
     
-Indiretos:
+### Indiretas
 
     * VSCode
     * Yarn (1.22.5)
@@ -21,16 +39,9 @@ Indiretos:
     * Docker (19.03.13)
     * Insomnia (2020.4.1)
 
-## Como rodar este projeto
+<a id="require"></a>
 
-Dentro da pasta raiz
-
-    `
-    yarn init
-    yarn start
-    `
-
-## Pré-requisitos
+## :memo: Pré-requisitos
 
 ### Instalação MongoDB
 
@@ -40,7 +51,19 @@ Com docker instalado utilizar os comandos do [link](https://gist.github.com/sgan
 
 Para checar as coleções cadastradas no banco de dados pode-se utilizar o plugin oficial [MongoDB](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode) no VSCode
 
-## Realizar chamadas API com Insomnia
+<a id="run"></a>
+
+## :fire: Como rodar este projeto
+
+Possuir o Yarn instalado na máquina e rodar os comandos dentro da pasta raiz do projeto:
+
+    `
+    yarn init
+    yarn start
+    `
+<a id="request"></a>
+
+## :trophy: Realizar chamadas API com Insomnia
 
 ### Criar variáveis de url
 
