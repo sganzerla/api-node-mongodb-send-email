@@ -4,7 +4,7 @@
 
 ## :bookmark: Sobre
 
-Projeto para testar cadastro de usuários com confirmação de email e recuperação de login utilizando base de dados MongoDB.
+Projeto para testar operações de cadastro e gerenciamento de usuários com envio de email utilizando Sendgrid e base de dados MongoDB.
 
 ## Índice
 
@@ -99,3 +99,16 @@ Possuir o Yarn instalado na máquina e rodar os comandos dentro da pasta raiz do
 ### Resetando senha
 
 ![image](resources/insomnia/reset.png)
+
+
+## TODO
+
+* converter para typescript
+* refatorar serviço de envio de email
+* criar integração com outros player de envio de email:
+    * sparkpost
+    * mailchimp
+    * mandrill
+    * ses
+* criar integração com player de envio de sms
+    * twilio
