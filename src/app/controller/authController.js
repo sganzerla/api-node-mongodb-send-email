@@ -82,7 +82,7 @@ export async function forgout(req, res) {
             to: email,
             from: 'alisson.sganzerla@gmail.com', // Change to your verified sender
             subject: 'Recuperação login',
-            html: `<strong>Para recuperar seu login utilize o token "${token}" na requisição API criando uma nova senha. Esse token tem validade até ${now}<strong>`,
+            html: `Para recuperar seu login utilize retorne o token <strong>"${token}"</strong>, o seu email e uma nova senha na requisição API auth/reset_password para recriar uma nova senha. Mas atenção, esse token tem validade até ${now}.`,
         }
         sgMail
             .send(msg)
@@ -97,5 +97,37 @@ export async function forgout(req, res) {
     } catch (error) {
         console.log(error);
         return res.status(400).send({ error: 'Error on forgout password, try again' });
+    }
+}
+
+export async function reset(req, res) {
+    const { email, token, password } = req.body;
+
+
+    try {
+
+        const user = await User.findOne({ email })
+            .select('+passwordResetToken passwordResetExpires');
+
+        if (!user)
+            return res.status(400).send({ error: 'User not found' });
+
+
+        if (token !== user.passwordResetToken)
+            return res.status(400).send({ error: 'Token invalid' });
+
+        const now = new Date();
+
+        if (now > user.passwordResetExpires)
+            return res.status(400).send({ error: 'Token expired, generate a new' });
+
+        user.password = password;
+
+        await user.save();
+
+        res.send();
+
+    } catch (error) {
+
     }
 }
