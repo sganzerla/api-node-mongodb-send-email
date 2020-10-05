@@ -3,8 +3,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
 import authConfig from './../../config/auth.js';
-import sgMail from  '@sendgrid/mail';
-
+import sgMail from '@sendgrid/mail';
 
 function generateToken(params = {}) {
     return jwt.sign(params, authConfig.secret, {
@@ -77,24 +76,23 @@ export async function forgout(req, res) {
                 passwordResetExpires: now,
             }
         });
-        
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
         const msg = {
-          to: user.email, // Change to your recipient
-          from: 'alisson.sganzerla@gmail.com', // Change to your verified sender
-          subject: 'Sending with SendGrid is Fun',
-          text: 'and easy to do anywhere, even with Node.js',
-          html: `<strong>and easy to do anywhere, even with Node.js ${token} </strong>`,
+            to: email,
+            from: 'alisson.sganzerla@gmail.com', // Change to your verified sender
+            subject: 'Recuperação login',
+            html: `<strong>Para recuperar seu login utilize o token "${token}" na requisição API criando uma nova senha. Esse token tem validade até ${now}<strong>`,
         }
         sgMail
-          .send(msg)
-          .then(() => {
-            console.log('Email sent')
-          })
-          .catch((error) => {
-            console.error(error)
-          })
-       
+            .send(msg)
+            .then(() => {
+                return res.status(200).send('Email sent');
+            })
+            .catch((error) => {
+                return res.status(200).send(error);
+            })
+
 
     } catch (error) {
         console.log(error);
