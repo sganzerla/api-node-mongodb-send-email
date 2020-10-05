@@ -95,3 +95,7 @@ Possuir o Yarn instalado na máquina e rodar os comandos dentro da pasta raiz do
 ### Recuperar login de acesso
 
 ![image](resources/insomnia/post-forgout.png)
+
+### Resetando senha
+
+![image](resources/insomnia/reset.png)
