@@ -30,14 +30,17 @@ Neste projeto foram empregadas as seguintes tecnologias:
     * nodemon (2.0.4)
     * bcryptjs (2.4.3)
     * jsonwebtoken (8.5.1)
+    * @sendgrid/mail (7.2.6)
     
 ### Indiretas
 
-    * VSCode
+    * Ubuntu (20.04)
     * Yarn (1.22.5)
-    * MongoDB
     * Docker (19.03.13)
     * Insomnia (2020.4.1)
+    * VSCode
+    * MongoDB
+    * Sendgrid API
 
 <a id="require"></a>
 
@@ -88,3 +91,7 @@ Possuir o Yarn instalado na máquina e rodar os comandos dentro da pasta raiz do
 ### Acessar url com autenticação
 
 ![image](resources/insomnia/get-project.png)
+
+### Recuperar login de acesso
+
+![image](resources/insomnia/post-forgout.png)
