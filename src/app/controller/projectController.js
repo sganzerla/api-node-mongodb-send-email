@@ -23,7 +23,34 @@ export async function show(req, res) {
 }
 
 export async function update(req, res) {
-    return res.send();
+    try {
+
+        const { title, description, tasks } = req.body;
+
+        const project = await Project.findByIdAndUpdate(
+            req.params.projectId,
+            {
+                title,
+                description,
+            },
+            { new: true }
+        );
+        project.tasks = [];
+        await Task.remove({ project: project._id });
+
+        await Promise.all(tasks.map(async task => {
+            const projectTask = new Task({ ...task, project: project._id });
+            await projectTask.save();
+            project.tasks.push(projectTask);
+        }));
+
+        await project.save();
+
+        return res.send({ project });
+    } catch (error) {
+        console.log(error);
+        return res.status(400).send({ error: 'Error creating new project' });
+    }
 }
 
 export async function store(req, res) {
