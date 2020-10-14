@@ -6,7 +6,8 @@
   "author": "Alisson Michel Sganzerla <alisson_sganzerla@yahoo.com.br>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "commit": "cz"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.2.6",
@@ -16,7 +17,13 @@
     "mongoose": "^5.10.7"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "3.3.0",
     "nodemon": "^2.0.4"
   },
-  "type": "module"
+  "type": "module",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
