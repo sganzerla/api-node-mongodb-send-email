@@ -8,13 +8,12 @@ Projeto para testar operações de cadastro e gerenciamento de usuários com env
 
 ## Índice
 
-- [Índice]
-    - [:bookmark: Sobre](#sobre)
-    - [:rocket: Tecnologias utilizadas](#tecnologias-utilizadas)
-    - [:memo: Pré-requisitos](#require)
-    - [:fire: Como rodar este projeto](#run)
-    - [:trophy: Realizar chamadas API com Insomnia](#request)
-
+- Índice
+  - [:bookmark: Sobre](#sobre)
+  - [:rocket: Tecnologias utilizadas](#tecnologias-utilizadas)
+  - [:memo: Pré-requisitos](#require)
+  - [:fire: Como rodar este projeto](#run)
+  - [:trophy: Realizar chamadas API com Insomnia](#request)
 
 <a id="tecnologias-utilizadas"></a>
 
@@ -25,19 +24,20 @@ Neste projeto foram empregadas as seguintes tecnologias:
 ### Diretas
 
     * Node.js (12.18.4)
-    * express (4.17.1)  
+    * express (4.17.1)
     * mongoose (5.10.7)
     * nodemon (2.0.4)
     * bcryptjs (2.4.3)
     * jsonwebtoken (8.5.1)
     * @sendgrid/mail (7.2.6)
-    
+
 ### Indiretas
 
     * Ubuntu (20.04)
     * Yarn (1.22.5)
     * Docker (19.03.13)
     * Insomnia (2020.4.1)
+    * Commitizen CLI
     * VSCode
     * MongoDB
     * Sendgrid API
@@ -64,51 +64,41 @@ Possuir o Yarn instalado na máquina e rodar os comandos dentro da pasta raiz do
     yarn init
     yarn start
     `
+
 <a id="request"></a>
 
 ## :trophy: Realizar chamadas API com Insomnia
 
-### Criar variáveis de url
+A controller auth é pública não exigindo token de autenticação.
 
-![image](resources/insomnia/environment1.png)
+Já a controller project necessita de um token válido.
 
-![image](resources/insomnia/environment2.png)
+### Importar JSON
 
-### Criar requisição post 
+Importar requisições API no arquivo [json](resources/insomnia/Insomnia_api_node.json)
 
-![image](resources/insomnia/requestpost1.png)
+### Gerar token
 
-![image](resources/insomnia/requestpost2.png)
+Com um usuário já criado, realizar operação de login
 
-#### Cadastrar usuários
+![image](resources/insomnia/auth.png)
 
-![image](resources/insomnia/requestpost3.png)
+### Setar token variável ambiente
 
-#### Realizar login
+Mudar o token da variável de ambiente, mantendo a palavra Bearer e um espaço entre ela e o novo token.
 
-![image](resources/insomnia/auth-post.png)
+![image](resources/insomnia/token.png)
 
-### Acessar url com autenticação
+## Próximos passos
 
-![image](resources/insomnia/get-project.png)
-
-### Recuperar login de acesso
-
-![image](resources/insomnia/post-forgout.png)
-
-### Resetando senha
-
-![image](resources/insomnia/reset.png)
-
-
-## TODO
-
-* converter para typescript
-* refatorar serviço de envio de email
-* criar integração com outros player de envio de email:
-    * sparkpost
-    * mailchimp
-    * mandrill
-    * ses
-* criar integração com player de envio de sms
-    * twilio
+- converter para typescript
+- refatorar serviço de envio de email
+- criar integração com outros player de envio de email:
+  - sparkpost
+  - mailchimp
+  - mandrill
+  - ses
+- criar integração com player de envio de sms
+  - twilio
+- refatorar router
+- criar controller task
